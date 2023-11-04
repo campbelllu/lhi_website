@@ -20,4 +20,6 @@ jobs:
         aws-region: us-east-2
 
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ~/masterSword/LHI/lhi_website/webmats s3://lukehasideas.com #--delete
+      run: aws s3 sync ~/webmats s3://lukehasideas.com #--exclude 'README.md' #--delete
+      #it seems to be looking on the git repo, not locally
+      #anastasiya LOVES YOU <3
