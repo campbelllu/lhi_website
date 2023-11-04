@@ -90,7 +90,7 @@ header nav{
 }
 
 button{
-    class="btn btn-default well";
+    /*class="btn btn-default well";*/
     border-radius: 25%;
 }
 button:hover{
