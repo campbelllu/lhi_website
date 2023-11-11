@@ -1,4 +1,17 @@
 /* <style> */
+html{
+    height: 100%;
+    /* min-height: 100%; */
+    /* overflow: hidden; */
+}
+body{
+    height: 100%;
+    /* min-height: 100%; */
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    /* overflow: visible; */
+}
 a{
     background-size: 100%;
     background-repeat: no-repeat;
@@ -14,7 +27,7 @@ header{
     /*background-repeat: repeat-x;*/
     color: white;
     /*height: 520px;*/
-    padding: 10%;
+    padding: 5%;
     text-align: center;
 }
 header a{
@@ -58,7 +71,6 @@ header nav{
 	padding: 16px 16px;
 	text-decoration: none;
 	display: relative;
-    
 }
 .dropdowns .drop-content{
 	display: none;
@@ -68,7 +80,6 @@ header nav{
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0);
     z-index: 1;
     /*border: 1px solid silver; /*--- box around all options --->*/
-    
 }
 .dropdowns .drop-content a{
 	color: white;
@@ -76,19 +87,15 @@ header nav{
 	text-decoration: none;
 	display: block;
     border: 3px solid silver; /*--- box around individual options --->*/
-    
 }
 .dropdowns:hover .drop-content{
 	display: block;
-    
 }
 .dropdowns .drop-content a:hover{
 	background-color: blue;
     color: white;
     scale: 1.2;
-   
 }
-
 button{
     /*class="btn btn-default well";*/
     border-radius: 25%;
@@ -115,7 +122,13 @@ figure figcaption{
 footer{
     background-color: black;
     color: white;
-    padding: 0%;
+    padding: 0px;
+    margin: 0px;
+    height: 15%; /*There has to be a better solution out there. Plus, the text isn't directly at the bottom of the screen. Hmmm.*/
+    /* position: absolute; */
+    /* bottom: 0; */
+    text-align: center;
+    overflow: visible;
 }
 .center-text{
 	background: black;
@@ -131,11 +144,9 @@ footer{
 	color: white;
     font-size: 20px;
     background-color: black;
-    padding: 50px;
-    display: flex;
+    /*padding: 50px;  Useful for vertical spacing, not necessary with this <p> */
+    /*display: flex;  This guy here ruined my center placement. */
 }
-
-
 /* business info - calendar and topics links */
 .business-info{
     background-color: black;
@@ -168,7 +179,6 @@ footer{
     float: left;
     width: 50%;
 }
-
 /* leftovers to help format circle buttons */
 .special-deal-label{
     background: black;
@@ -179,7 +189,6 @@ footer{
     flex-wrap: wrap;
     text-align: center;
 }
-
 .special-deal-label p{
     color: white;
     font-size: 40px;
@@ -194,7 +203,6 @@ footer{
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
-
 }
 .special-deal figure{
     margin: auto;
@@ -244,5 +252,4 @@ body .special-deal .next-special{
     width: 200px;
     height: 265px;
 }
-
 /* </style> */
