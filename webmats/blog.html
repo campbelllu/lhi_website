@@ -53,16 +53,39 @@
         </div>
         
         <div class="center-text">
-        	<p>
-                I'm debating how to organize this so it isn't just a mile-long page with zero navigation. Most recent article displayed, subject matter menus? Click a topic, click a title? We'll see.
-        	</p>
-            <p>
-                Writing as a medium for tracking learning, growth, and challenges is better for me than video format. Expect some stuff here by end of Q1 2024. 
-            </p>
+        	<p>I'm debating how to organize this so it isn't just a mile-long page with zero navigation. Most recent article displayed, subject matter menus? Click a topic, click a title? We'll see. </p>
+            <p>Until a definitive decision is made, all blog posts will be displayed as detail accordions.</p>
+            <details>
+                <summary>8/29/2024, "How I got the data, organized it, issues I found and solved, creation of the Mega table."</summary>
+                <p>The SEC allows queries to be requested from their EDGAR API. Using Python scripting, I was able to gather full SEC filings for any company of my choosing, afte gathering 
+                    a document from them that matched company tickers to the value they assign to the company for their record keeping, a 'CIK' number. Automating the process to cycle through 
+                    CIK values, query EDGAR, and record the responses to CSV's was the first iteration of data collection. Those CSV's could then be parsed at my discretion. Obviously, only a handful 
+                    were first gathered.
+                </p>
+                <p>Each value reported the SEC uses some familiar names, some alien to those not versed deeply in accounting, XBRL, or SEC-speak. Some values had to be found and matched to determine exactly 
+                    which data represented which values for companies. To this day, some values are still missing. First, I found numerical values from SeekingAlpha.com or StockAnalysis.com, and then 
+                    did a simple 'CTRL+F' in the CSV's to try and find how those values were labeled. In most cases, finding those matching numbers illuminated how the accounting values are stored, logged, 
+                    reported to the SEC. In some cases, the values had to be broken into pieces and later added together, such as long term and short term debt to equal total debt values. In rare cases, 
+                    values weren't, or haven't yet been, found. This is evident on the website in that some Financial sector stocks have zero revenue data. Obviously, they have revenue data, but my site and 
+                    database don't reflect that because I couldn't find either the annual amount in total, nor in parts, nor under any labeling of the SEC CSV's, stumping me temporarily until a later date.
+                </p>
+                <p>The Python scripts were then added to, to gather the relevant values, and to coalesce them into a dataframe. Missing values were cleaned via back-and-forward fill, average-value-filling, or 
+                    left blank, whichever was most appropriate for the data type. Some values were also calculated from this data, such as ROCE from Net Income and Shareholder's Equity. Growth rates were also 
+                    calculated for each year's interval. After a completely filling a dataframe with all relevant financial data, all calculated data, that dataframe was uploaded to a matching DB table, entitled 
+                    Mega which was made via models.py in Django, and a new CIK query was sent to SEC's EDGAR to fetch the next ticker's data.
+                </p>
+                <p>One issue found after the first update to the Mega table, was a new earliest year of data, possibly missed on earlier rounds of data wrangling, that backfilling cleaning functions 
+                    have inaccurately filled missing values with the LATEST years' financial data. For example, revenue values for TSLA in 2007 are matching revenue values in 2023. Oops! This will be remedied 
+                    with a simple comparison function, drawing SQL statements from Mega, and if the first years' data matches the final years' data, then we'll just drop the first years' data, or wipe it clean. 
+                    That's how I'm thinking of fixing this particular issue, but I will update here as we proceed to clean up such bugs. Otherwise, all data therein appears to match cross references with the aforementioned 
+                    websites' data, giving me confidence that our data collection methods are working well 'enough' for most retail investors to get at least a marginal use out of our databanks. Educational use only, 
+                    of course.
+                </p>
+            </details>
         </div>
     </body>
     
-    <footer class="footer">This site will never collect any data from you. Produced solely by Luke Campbell, 2023</footer>
+    <footer class="footer">This site will never collect any data from you. Produced solely by Luke Campbell, est'd 2023</footer>
     <!-- <script type="text/javascript" src="scripts.js"></script> -->
 </html>
 <!-- div classes:special-deal, business-info currently unused -->
