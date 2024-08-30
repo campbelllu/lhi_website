@@ -147,6 +147,13 @@ footer{
     /*padding: 50px;  Useful for vertical spacing, not necessary with this <p> */
     /*display: flex;  This guy here ruined my center placement. */
 }
+.center-text details{
+	color: rgb(9, 234, 43);
+    font-size: 25px;
+    background-color: black;
+    padding: 1%;  /*Useful for vertical spacing, not necessary with this <p> */
+    /*display: flex;  This guy here ruined my center placement. */
+}
 /* business info - calendar and topics links */
 .business-info{
     background-color: black;
@@ -179,6 +186,7 @@ footer{
     float: left;
     width: 50%;
 }
+
 /* leftovers to help format circle buttons */
 .special-deal-label{
     background: black;
