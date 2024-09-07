@@ -83,6 +83,40 @@
                     of course.
                 </p>
             </details>
+            <details>
+                <summary>9/6/2024, Finance Software Project: What's involved in the creation of the Metadata table.</summary>
+                <p>From the Mega table, we can calculate averages of all values. Taking the list of Mega values, we have two averages calculated, average and average ignoring zeroes. Most of what you 
+                    see is the former, the latter was mostly used to determine if stock splits and faulty data recording were showing obtuse values.
+                </p>
+                <p>Averages for all values are calculated. Metadata is essentially a single row for each ticker in the table. It generates a tangible set of data for users to digest the information 
+                    that each security registers or reports to the SEC.
+                </p>
+                <p>One nifty trick was the cleaning and then display of any data in the Mega table was to exclude any outliers in the data column being analyzed. In each report, stock splits make 
+                    the data present in ridiculous ways. Luckily, using statistical methods allows for the ignorance of such values via Interquartile ranges, projecting averages from values that aren't 
+                    outliers, that also matched fairly closely to value on other sites. 
+                </p>
+                <p>Metadata fuels the stock ranking pages of our site. Raw values, revenue of a specific year, means almost nothing. But the average revenue growth over the lifetime of reports gathered? 
+                    That is something useful that people can use to make wise investment decisions. After contacting a financial advisor, of course.
+                </p>
+            </details>
+            <details>
+                <summary>9/6/2024, Finance Software Project: What even are the Stock Rankings?</summary>
+                <p>Evaluating values in the Metadata table, we can rank stocks in each sector. Each sector requires different evaluation metrics, and our rankings try to capture the best of the 
+                    best in each sector, based on those metrics.
+                </p>
+                <p>Each value in Metadata is given a ranking, and each value is also given a score. So dividend growth, for example, has a score between '-5' an '5', then the weighting is multiplied by that 
+                    score, allowing us to weight each stock in comparison to all the others in that sector.
+                </p>
+                <p>These weightings will change over time, but the Sector Rankings will remain available to stock pickers via our site because that's part of what we offer to those who are interested. 
+                    Energy stocks need to be compared to other energy stocks. Given our weighting schema, how do each of the firms in each sector compare to each other? It could be a useful tool to 
+                    investors to help decide where to allocate their money. After contacting a finanical advisor, of course. Never take our recommendations at face value, only. None of our site's 
+                    productions should be construed as financial advice.
+                </p>
+                <p>As the rankings change through the years, we'll keep users informed of changes in the rankings, and how the rankings are constructed. Expect more posts explaining exactly how 
+                    we do our ranking of each sector: It's subjective, but we hope to provide an overview of each sector such that users of the site are able to evaluate and weigh important investing 
+                    decisions for themselves.
+                </p>
+            </details>
         </div>
     </body>
     

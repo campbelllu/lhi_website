@@ -1,6 +1,5 @@
 # lhi_website
-As I (re)build my personal website, this will become something worth looking at.
-As of now, it's little more than some simple HTML and CSS to play around with while I relearn fundamentals and plan what all will be included on the website.
+It's little more than some simple HTML and CSS. The magic is in the main.yml, which runs GHA.
 
 All the best,
 Luke
