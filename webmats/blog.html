@@ -56,9 +56,25 @@
         <div class="center-text">
         	<p>I'm debating how to organize this so it isn't just a mile-long page with zero navigation. Most recent article displayed, subject matter menus? Click a topic, click a title? We'll see. </p>
             <p>Until a definitive decision is made, all blog posts will be displayed as detail accordions.</p>
+            
+            <details>
+                <summary>11/8/2024, Finance Software Project, Career Goals, Youtube: Rediscovering life goals.</summary>
+                <p>
+                    The finance project is wrapping up. A few tools need to be integrated into it, taken from the scripts that run them, but otherwise it's become a lot more presentable over the past three months. 
+                    I need to set up the infrastructure, build GHA script to include and we'll be golden. Exclusive content will be offered through Ko-fi, stock reports, possibly others.
+                </p>
+                <p>
+                    I'm debating where to go next, tech-wise. Depending on how the above deployment goes, I may stick with the DevOps plans, but focusing on either Data Analysis/ML tools or MS-based Sys. Admin tools is also appealing. 
+                    The idea of 'capping out' my career responsibilities and focusing on creating content for both personal and financial topics is very appealing. I need to do some soul-searching to figure out where to 
+                    go next.
+                </p>
+                <p>
+                    Tech is fun. Tech is great. I'm just feeling called more towards self-employment and trying to figure out how to make that work. We'll see.
+                </p>
+            </details>
             <details>
                 <summary>8/29/2024, Finance Software Project: How I got the data, organized it, issues I found and solved, creation of the Mega table.</summary>
-                <p>The SEC allows queries to be requested from their EDGAR API. Using Python scripting, I was able to gather full SEC filings for any company of my choosing, afte gathering 
+                <p>The SEC allows queries to be requested from their EDGAR API. Using Python scripting, I was able to gather full SEC filings for any company of my choosing, after gathering 
                     a document from them that matched company tickers to the value they assign to the company for their record keeping, a 'CIK' number. Automating the process to cycle through 
                     CIK values, query EDGAR, and record the responses to CSV's was the first iteration of data collection. Those CSV's could then be parsed at my discretion. Obviously, only a handful 
                     were first gathered.
@@ -122,5 +138,14 @@
     
     <footer class="footer">This site will never collect any data from you. Produced solely by Luke Campbell, est'd 2023</footer>
     <!-- <script type="text/javascript" src="scripts.js"></script> -->
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+    kofiWidgetOverlay.draw('lukehasideas', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support Luke',
+        'floating-chat.donateButton.background-color': '#5cb85c',
+        'floating-chat.donateButton.text-color': '#fff'
+    });
+    </script>
 </html>
 <!-- div classes:special-deal, business-info currently unused -->

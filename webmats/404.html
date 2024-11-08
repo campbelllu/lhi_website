@@ -60,13 +60,19 @@
             <p>
                 Try one of the links up top to get where you want to go.
         	</p>
-            <p>
-                Eventually, this page might let you submit a bug report. But it's a static website hosted in an S3 bucket. So uh... Yeah.
-            </p>
         </div>
     </body>
 
     <footer class="footer">This site will never collect any data from you. Produced solely by Luke Campbell, est'd 2023</footer>
     <!-- <script type="text/javascript" src="scripts.js"></script> -->
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+    kofiWidgetOverlay.draw('lukehasideas', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support Luke',
+        'floating-chat.donateButton.background-color': '#5cb85c',
+        'floating-chat.donateButton.text-color': '#fff'
+    });
+    </script>
 </html>
 <!-- div classes:special-deal, business-info currently unused -->
